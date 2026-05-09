@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Tender Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Tender Report"
+  },
+  "ui5AppDetails": {
+    "appId": "ztenderreport.ztenderreport"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8AE858A28FEAA7546BAC0EB77BBAD15518C20DE3_TM",
+    "semanticObject": "ztenderreport",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8AE858A28FEAA7546BAC0EB77BBAD15518C20DE3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Tender Report"
+      }
+    }
+  ]
+}

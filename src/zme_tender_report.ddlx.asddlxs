@@ -1,0 +1,353 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: { typeName: 'Tender Report',
+                  typeNamePlural: 'Tender Report',
+                  title: { type: #STANDARD, label: 'Tender Report', value: 'Salesinq' } }
+
+@UI.presentationVariant: [ { sortOrder: [ { by: 'Salesinq',     direction: #DESC  } ],
+                             visualizations: [ { type: #AS_LINEITEM } ],
+                             text: 'Tender Report' } ]
+annotate view ZR_TENDER_RPT with
+{
+
+  @UI.facet: [ {
+     label: 'General Information',
+     id: 'GeneralInfo',
+     purpose: #STANDARD,
+     position: 10 ,
+     type: #IDENTIFICATION_REFERENCE
+   }]
+
+
+
+  //  @UI.fieldGroup: [ { position: 10, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  Salesinq;
+
+  // @UI.fieldGroup: [ { position: 20, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 20 } ]
+  Lineitem;
+  @UI.selectionField: [ { position: 20 } ]
+  //  @UI.fieldGroup: [ { position: 30, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+  TenderNumber;
+  @UI.identification: [ { position: 31 } ]
+  @UI.lineItem: [ { position: 31 },
+                  { criticality: 'criticality' } ]
+  @EndUserText.label: 'Status'
+  status;
+
+  @EndUserText.label: 'Criticality'
+  criticality;
+
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  L1Company;
+
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50 } ]
+
+  L1QuotedRate;
+  // @UI.fieldGroup: [ { position: 50, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  L2Company;
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70 } ]
+  L2QuotedRate;
+  @UI.identification: [ { position: 71 } ]
+  @UI.lineItem: [ { position: 71 } ]
+  L3Company;
+  @UI.identification: [ { position: 72 } ]
+  @UI.lineItem: [ { position: 72 } ]
+  L3QuotedRate;
+  @UI.identification: [ { position: 73 } ]
+  @UI.lineItem: [ { position: 73 } ]
+  L4Company;
+  @UI.identification: [ { position: 74 } ]
+  @UI.lineItem: [ { position: 74 } ]
+  L4QuotedRate;
+  @UI.identification: [ { position: 75 } ]
+  @UI.lineItem: [ { position: 75 } ]
+  L5Company;
+  @UI.identification: [ { position: 76 } ]
+  @UI.lineItem: [ { position: 76 } ]
+  L5QuotedRate;
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80 } ]
+  @UI.selectionField: [ { position: 30 } ]
+  SalesQuotation;
+  // @UI.fieldGroup: [ { position: 90, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 90 } ]
+  @UI.lineItem: [ { position: 90 } ]
+  SalesQuotationItem;
+  @UI.identification: [ { position: 91 } ]
+  @UI.lineItem: [ { position: 91 },
+                  { criticality: 'salescontcrit' } ]
+
+  contractsts;
+  @EndUserText.label: 'Criticality'
+
+  salescontcrit;
+  //  @UI.fieldGroup: [ { position: 100, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 100 } ]
+  @UI.lineItem: [ { position: 100 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  SalesContract;
+  //  @UI.fieldGroup: [ { position: 110, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110 } ]
+  SalesContractItem;
+  @UI.identification: [ { position: 111 } ]
+  @UI.lineItem: [ { position: 111 },
+                  { criticality: 'ordcrit' } ]
+  ordsts;
+  @EndUserText.label: 'Criticality'
+  ordcrit;
+  //  @UI.fieldGroup: [ { position: 120, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 120 } ]
+  @UI.lineItem: [ { position: 120 } ]
+  @UI.selectionField: [ { position: 50 } ]
+  SalesOrder;
+  //  @UI.fieldGroup: [ { position: 130, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 130 } ]
+  @UI.lineItem: [ { position: 130 } ]
+  SalesOrderItem;
+  // @UI.fieldGroup: [ { position: 140, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 140 } ]
+  @UI.lineItem: [ { position: 140 } ]
+  RailwayZone;
+  // @UI.fieldGroup: [ { position: 150, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 150 } ]
+  @UI.lineItem: [ { position: 150 } ]
+  TenderType;
+  // @UI.fieldGroup: [ { position: 160, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 160 } ]
+  @UI.lineItem: [ { position: 160 } ]
+  ContractType;
+  //  @UI.fieldGroup: [ { position: 170, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 170 } ]
+  @UI.lineItem: [ { position: 170 } ]
+  NitcontactPerson;
+  //  @UI.fieldGroup: [ { position: 180, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 180 } ]
+  @UI.lineItem: [ { position: 180 } ]
+  Billtoparty;
+  //  @UI.fieldGroup: [ { position: 190, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 190 } ]
+  @UI.lineItem: [ { position: 190 } ]
+  TenderStartDate;
+  // @UI.fieldGroup: [ { position: 200, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 200 } ]
+  @UI.lineItem: [ { position: 200 } ]
+  Division;
+  // @UI.fieldGroup: [ { position: 210, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 210 } ]
+  @UI.lineItem: [ { position: 210 } ]
+  Biddingtype;
+  //  @UI.fieldGroup: [ { position: 220, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 220 } ]
+  @UI.lineItem: [ { position: 220 } ]
+  EvaluationCriteria;
+  // @UI.fieldGroup: [ { position: 230, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 230 } ]
+  @UI.lineItem: [ { position: 230 } ]
+  NominatedPerson;
+  //  @UI.fieldGroup: [ { position: 240, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 240 } ]
+  @UI.lineItem: [ { position: 240 } ]
+  TenderEndDate;
+  @UI.identification: [ { position: 241 } ]
+  @UI.lineItem: [ { position: 241 } ]
+  @UI.selectionField: [ { position: 80 } ]
+  Unit;
+  @UI.hidden: true
+  TenderValueCurr;
+  //  @UI.fieldGroup: [ { position: 250, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 250 } ]
+  @UI.lineItem: [ { position: 250 } ]
+  TenderValue;
+  //  @UI.fieldGroup: [ { position: 260, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 260 } ]
+  @UI.lineItem: [ { position: 260 } ]
+  PrebidConference;
+  //  @UI.fieldGroup: [ { position: 270, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 270 } ]
+  @UI.lineItem: [ { position: 270 } ]
+  FollowUp;
+  //  @UI.fieldGroup: [ { position: 280, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 280 } ]
+  @UI.lineItem: [ { position: 280 } ]
+  Remark;
+  //  @UI.fieldGroup: [ { position: 290, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 290 } ]
+  @UI.lineItem: [ { position: 290 } ]
+  RemarkDate;
+  // @UI.fieldGroup: [ { position: 300, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 300 } ]
+  @UI.lineItem: [ { position: 300 } ]
+  Psus;
+  // @UI.fieldGroup: [ { position: 310, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 310 } ]
+  @UI.lineItem: [ { position: 310 } ]
+  Inspectionagency;
+  // @UI.fieldGroup: [ { position: 320, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 320 } ]
+  @UI.lineItem: [ { position: 320 } ]
+  Biddingtobedoneon;
+  // @UI.fieldGroup: [ { position: 330, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 330 } ]
+  @UI.lineItem: [ { position: 330 } ]
+  Biddingsystem;
+  //  @UI.fieldGroup: [ { position: 340, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 340 } ]
+  @UI.lineItem: [ { position: 340 } ]
+  Tenderingsection;
+  // @UI.fieldGroup: [ { position: 350, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 350 } ]
+  @UI.lineItem: [ { position: 350 } ]
+  Itemcategory;
+  //  @UI.fieldGroup: [ { position: 360, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 360 } ]
+  @UI.lineItem: [ { position: 360 } ]
+  Procurefromapprovedsources;
+  // @UI.fieldGroup: [ { position: 370, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 370 } ]
+  @UI.lineItem: [ { position: 370 } ]
+
+  Validityofferdays;
+  @UI.hidden: true
+  TenderDocCurr;
+  //  @UI.fieldGroup: [ { position: 380, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 380 } ]
+  @UI.lineItem: [ { position: 380 } ]
+  Tenderdocumentcost;
+  //  @UI.fieldGroup: [ { position: 390, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 390 } ]
+  @UI.lineItem: [ { position: 390 } ]
+  Template;
+  @UI.hidden: true
+  EmdvalueCurr;
+  //  @UI.fieldGroup: [ { position: 400, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 400 } ]
+  @UI.lineItem: [ { position: 400 } ]
+  Emdvalue;
+  //  @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 410 } ]
+  @UI.lineItem: [ { position: 410 } ]
+  Contractcategory;
+  //  @UI.fieldGroup: [ { position: 420, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 420 } ]
+  @UI.lineItem: [ { position: 420 } ]
+  OpenitemAmountCurr;
+  //  @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 430 } ]
+  @UI.lineItem: [ { position: 430 } ]
+  OpenitemAmount;
+  //  @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 440 } ]
+  @UI.lineItem: [ { position: 440 } ]
+
+  Material;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 450 } ]
+  @UI.lineItem: [ { position: 450 } ]
+  Materialtext;
+  @UI.hidden: true
+  Uom;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 460 } ]
+  @UI.lineItem: [ { position: 460 } ]
+  Qunatity;
+
+  @UI.identification: [ { position: 470 } ]
+  @UI.lineItem: [ { position: 470 } ]
+
+  quotemat;
+  @UI.identification: [ { position: 480 } ]
+  @UI.lineItem: [ { position: 480 } ]
+  SalesQuotationItemText;
+  @UI.hidden: true
+  OrderQuantityUnit;
+  @UI.identification: [ { position: 490 } ]
+  @UI.lineItem: [ { position: 490 } ]
+  OrderQuantity;
+  @UI.hidden: true
+  TransactionCurrency;
+  @UI.identification: [ { position: 500 } ]
+  @UI.lineItem: [ { position: 500 } ]
+  NetAmount;
+  @UI.identification: [ { position: 510 } ]
+  @UI.lineItem: [ { position: 510 } ]
+  contmat;
+  @UI.identification: [ { position: 520 } ]
+  @UI.lineItem: [ { position: 520 } ]
+  SalesContractItemText;
+  @UI.hidden: true
+  contquanunit;
+  @UI.identification: [ { position: 530 } ]
+  @UI.lineItem: [ { position: 530 } ]
+  contquan;
+  @UI.hidden: true
+  concurr;
+  @UI.identification: [ { position: 540 } ]
+  @UI.lineItem: [ { position: 540 } ]
+  conamt;
+  @UI.identification: [ { position: 550 } ]
+  @UI.lineItem: [ { position: 550 } ]
+  ordmat;
+  @UI.identification: [ { position: 560 } ]
+  @UI.lineItem: [ { position: 560 } ]
+  SalesOrderItemText;
+  @UI.hidden: true
+  ordquanunit;
+  @UI.identification: [ { position: 570 } ]
+  @UI.lineItem: [ { position: 570 } ]
+  ordqty;
+  @UI.hidden: true
+  ordcurr;
+  @UI.identification: [ { position: 580 } ]
+  @UI.lineItem: [ { position: 580 } ]
+  ordamt;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 590 } ]
+  @UI.lineItem: [ { position: 590 } ]
+  DrawingNo;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 600 } ]
+  @UI.lineItem: [ { position: 600 } ]
+  FeasiblityCheckStatus;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 610 } ]
+  @UI.lineItem: [ { position: 610 } ]
+  PlNo;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 620 } ]
+  @UI.lineItem: [ { position: 620 } ]
+  BidDecision;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 630 } ]
+  @UI.lineItem: [ { position: 630 } ]
+  Arilposition;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 640 } ]
+  @UI.lineItem: [ { position: 640 } ]
+  bidid;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 650 } ]
+  @UI.lineItem: [ { position: 650 } ]
+  bididdate;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 660 , label : 'LOA No.'} ]
+  @UI.lineItem: [ { position: 660 , label : 'LOA No.' } ]
+  PurchaseOrderByCustomer;
+  // @UI.fieldGroup: [ { position: 410, qualifier: 'HeaderData', importance: #HIGH } ]
+  @UI.identification: [ { position: 670 , label : 'LOA Date' } ]
+  @UI.lineItem: [ { position: 670 , label : 'LOA Date' } ]
+  CustomerPurchaseOrderDate;
+
+}

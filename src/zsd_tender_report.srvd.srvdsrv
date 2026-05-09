@@ -1,0 +1,4 @@
+@EndUserText.label: 'Tender Report'
+define service ZSD_TENDER_REPORT {
+  expose ZR_TENDER_RPT;
+}
